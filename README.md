@@ -1,27 +1,50 @@
-# Folder structure
+# Snoopy-Skies 🎮
 
-- `src` - source code for your kaboom project
-- `www` - distribution folder, contains your index.html, built js bundle and static assets
+**Snoopy-Skies** is a fun and fast-paced **web video game** built with [Kaboom.js](https://kaboomjs.com/) — a JavaScript game engine for making 2D games that run right in your browser.
 
+---
 
-## Development
+## 🚀 Features
 
-```sh
-$ npm run dev
+- Built entirely with **Kaboom.js**
+- Responsive design — works on desktop and mobile browsers
+- Smooth animations and sprite-based movement
+- Randomized obstacles for infinite replayability
+- Simple yet addictive gameplay loop
+
+---
+
+## 🧩 Tech Stack
+
+- **Kaboom.js** – 2D game engine
+- **JavaScript (ES6)** – game logic
+- **HTML/CSS** – structure and styling
+
+---
+
+## 🕹️ Getting Started
+
+Clone this repo:
+
+```bash
+git clone https://github.com/yourusername/Snoopy-Skies.git
+cd Snoopy-Skies
 ```
 
-will start a dev server at http://localhost:8000
+Install dependencies (if any):
 
-## Distribution
-
-```sh
-$ npm run build
+```bash
+npm install
 ```
 
-will build your js files into `www/main.js`
+Start the game locally:
 
-```sh
-$ npm run bundle
+```bash
+npm run dev
 ```
 
-will build your game and package into a .zip file, you can upload to your server or itch.io / newground etc.
+---
+
+## 🧠 Inspiration
+
+Inspired by classic side-scrolling flight games, **Snoopy-Skies** captures the joy of simple, reflex-driven gameplay in a modern web environment.
