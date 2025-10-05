@@ -1,5 +1,5 @@
 import kaboom from "kaboom";
-kaboom();
+kaboom({ pixelDensity: 1 });
 
 // LOAD SPRITES
 loadSprite("snoop1", "/sprites/snoop1.png");
@@ -169,7 +169,7 @@ scene("game", () => {
     score++;
     scoreLabel.text = score;
 
-    if (score % 35 === 0) spawnObsticle();
+    if (score % 40 === 0) spawnObsticle();
 
     // CHANGE SNOOP SPRITE
     if (score % 10 === 0) {
