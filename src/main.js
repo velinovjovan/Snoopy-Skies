@@ -12,10 +12,10 @@ const frames = ["snoop1", "snoop2"];
 
 console.log(width());
 
-// CONSTANTS
+// CONSTANTS 480
 const FLOOR_HEIGHT = height() / 15;
 const JUMP_FORCE = width() > 1300 ? 650 : 750;
-const SPEED = 480;
+const SPEED = width() > 1300 ? 480 : 320;
 const scrollSpeed = 200;
 
 let last = 0;
