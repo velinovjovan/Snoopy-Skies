@@ -10,9 +10,11 @@ loadSprite("house", "/sprites/house.png");
 loadSprite("ballon", "/sprites/ballon.png");
 const frames = ["snoop1", "snoop2"];
 
+console.log(width());
+
 // CONSTANTS
 const FLOOR_HEIGHT = height() / 15;
-const JUMP_FORCE = 650;
+const JUMP_FORCE = width() > 1300 ? 650 : 750;
 const SPEED = 480;
 const scrollSpeed = 200;
 
@@ -169,7 +171,9 @@ scene("game", () => {
     score++;
     scoreLabel.text = score;
 
-    if (score % 40 === 0) spawnObsticle();
+    const gameSpeed = width() > 1300 ? 40 : 90;
+
+    if (score % gameSpeed === 0) spawnObsticle();
 
     // CHANGE SNOOP SPRITE
     if (score % 10 === 0) {
@@ -180,7 +184,6 @@ scene("game", () => {
 
   onUpdate("bg", (bg) => {
     bg.move(-scrollSpeed, 0);
-    console.log(background.width);
 
     if (bg.pos.x < -background.width) {
       bg.pos.x += background.width * 3;
