@@ -14,8 +14,8 @@ console.log(width());
 
 // CONSTANTS 480
 const FLOOR_HEIGHT = height() / 15;
-const JUMP_FORCE = width() > 1300 ? 650 : 750;
-const SPEED = width() > 1300 ? 480 : 320;
+const JUMP_FORCE = width() > 1300 ? 650 : 500;
+const SPEED = width() > 1300 ? 480 : 150;
 const scrollSpeed = 200;
 
 let last = 0;
@@ -193,16 +193,15 @@ scene("game", () => {
 
 scene("lose", (score) => {
   add([
-    sprite("snoop1"),
+    sprite("snoop1", { height: height() / 3.5 }),
     pos(width() / 2, height() / 2 - 64),
-    scale(1),
     anchor("center"),
   ]);
 
   add([
-    text(score),
+    text(`Score: ${score}`),
     pos(width() / 2, height() / 2 + 250),
-    scale(2),
+    scale(height() > 1300 ? 2 : 1),
     color(0, 0, 0),
     anchor("center"),
   ]);
@@ -214,15 +213,14 @@ scene("lose", (score) => {
 
 scene("start", () => {
   add([
-    sprite("snoop1"),
+    sprite("snoop1", { height: height() / 3.5 }),
     pos(width() / 2, height() / 2 - 64),
-    scale(1),
     anchor("center"),
   ]);
   add([
     text("Tap to Start!"),
     pos(width() / 2, height() / 2 + 250),
-    scale(2),
+    scale(height() > 1300 ? 2 : 1),
     color(0, 0, 0),
     anchor("center"),
     "floatingText",
